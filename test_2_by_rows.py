@@ -1,7 +1,7 @@
 import csv
 
 
-def read_file(file_name):
+def read_file(file_name: str) -> list:
     '''
     Считывает файл с данными в список строк.
     '''
@@ -11,7 +11,7 @@ def read_file(file_name):
         return db
 
 
-def menu(file_name):
+def menu(file_name: str):
     '''
     Предоставляет интерфейс для управления
     набором опций по обработке данных.
@@ -41,9 +41,10 @@ def menu(file_name):
             return
         else:
             print('Выберите: 1, 2, 3 или 4')
+    return
 
 
-def struct_depts(df):
+def struct_depts(df: list):
     '''
     Формирует структуру департаментов и печатает ее
     '''
@@ -61,7 +62,7 @@ def struct_depts(df):
     return
 
 
-def struct_salary(df, key):
+def struct_salary(df: list, key: str):
     '''
     Формирует таблицу сводного отчета по департаментам.
     Если key = 2, то печатает ее,
